@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager - Kragefolket Website</title>
+
+  <!-- Include the styles for the Netlify CMS UI, after your own styles -->
+  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^2.0.0/dist/cms.css" />
+
+  <!-- Add Netlify authentication because GitHub requires an external server for OAuth -->
+  <!-- Make sure to include Nelify's authentiation library -->
+  <!-- Also available via npm as netlify-auth-providers -->
+  <script src="https://unpkg.com/netlify-auth-providers"></script>
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <!-- <script src="http://localhost:8080/dist/netlify-cms.js"></script> -->
+  <script>
+    
+    const CustomImagePreview = createClass({
+      render: function() {
+
+        var value = this.props.value;
+        var getAsset = this.props.getAsset;
+        var field = this.props.field;
+        var prefix = 'https://gitlab.com/kragefolket/website/raw/master/src/website/static'; // '/website';
+        var suffix = '?inline=false';
+
+        var uri = getAsset(value).public_path;
+        if(prefix && uri && uri.substring && uri.substring(0, 1) === '/') {
+          uri = prefix + uri + suffix;
+        }
+
+        var style = { maxWidth: '100%', height: 'auto' };
+        return uri ? h('div', { style: style },
+          h('img', { src: uri, role: 'presentation' })
+        ) : null;
+      }
+    });
+
+    CMS.registerWidget("image", "image", CustomImagePreview);
+    
+  </script>
+
+  <p><a href="#" id="login">Login</a></p>
+  <p id="output"></p>
+
+  <script>
+    document.querySelector('#login').on("click", function(e) {
+      e.preventDefault();
+      var authenticator = new netlify.default ({});
+      authenticator.authenticate({provider:"github", scope: "user"}, function(err, data) {
+        if (err) {
+          console.errro("Error Authenticating with GitHub: " + err);
+        } else {
+          console.log("Authenticated with GitHub. Access Token: " + data.token);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

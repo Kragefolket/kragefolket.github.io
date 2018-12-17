@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Enheds on Kragefolket - KFUM-Spejderne i Hellerup</title>
+    <link>https://kragefolket.github.io/enhed/</link>
+    <description>Recent content in Enheds on Kragefolket - KFUM-Spejderne i Hellerup</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>da</language>
+    
+	<atom:link href="https://kragefolket.github.io/enhed/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bæver</title>
+      <link>https://kragefolket.github.io/enhed/baever/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kragefolket.github.io/enhed/baever/</guid>
+      <description>Bæverne er de yngste spejdere vi har. De arbejder altid under vejledning af voksne ledere. De leger og synger og laver aktiviteter, hvorigennem de lærer noget om spejderarbejde og almene færdigheder.
+Hos bæverne bruger vi legen som metode til at lære spejderarbejdet at kende.
+Vi bruger naturen omkring os i det daglige arbejde.
+Dette foregår dels på de ugentlige møder og ikke mindst på weekendture. Bæverne tager både på deres &amp;ldquo;egne&amp;rdquo; ture, hvor der kun er bævere med, men er sandelig også med på gruppens ture, hvor alle aldre er samlet.</description>
+    </item>
+    
+    <item>
+      <title>Ulve</title>
+      <link>https://kragefolket.github.io/enhed/ulve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kragefolket.github.io/enhed/ulve/</guid>
+      <description>&amp;ldquo;Learning by doing&amp;rdquo; er et koncept som bruges i ulvenes spejderarbejde. Vi mener, at det at være spejder skal være med til at “danne” den enkelte ulv og lære nogle af de grundlæggende ting her i livet som samarbejde, at dele med andre og være en god ven. Vi tilstræber desuden at ulvene får en tiltro til egne evner og derved bliver mere selvsikre. Denne oplevelse får de ved at finde ud af at hvad de troede var umuligt, lykkedes for dem.</description>
+    </item>
+    
+    <item>
+      <title>Junior</title>
+      <link>https://kragefolket.github.io/enhed/junior/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kragefolket.github.io/enhed/junior/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spejdertroppen</title>
+      <link>https://kragefolket.github.io/enhed/trop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kragefolket.github.io/enhed/trop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vind i sejlene</title>
+      <link>https://kragefolket.github.io/enhed/vind-i-sejlene/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kragefolket.github.io/enhed/vind-i-sejlene/</guid>
+      <description>Uddannelse i sejlads ved gruppens sejlbåd. Se mere på vindisejlene.dk og Vind i Sejlene på Facebook</description>
+    </item>
+    
+  </channel>
+</rss>

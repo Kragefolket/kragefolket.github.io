@@ -1,0 +1,139 @@
+backend: 
+  name: "github"
+  repo: "kragefolket/website"
+
+media_folder: "src/website/static/media"
+public_folder: "/media"
+
+display_url: "https://kragefolket.github.io"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+
+  - label: "Faste sider"
+    name: files
+    files:
+      - label: "Forside"
+        name: "Home"
+        file: "src/website/content/_index.md"
+        fields:
+          - label: "Elementer"
+            name: "features"
+            widget: "list"
+            fields:
+            - { name: "title", label: "Title", widget: "string", required: false }
+            - { name: "weight", label: "Weight", widget: "number", required: false }
+            - { name: "description", label: "Text", widget: "text", required: false }
+            - { name: "icon", label: "Icon", widget: "string", hint: "Css icon from font awesome eg. 'fa fa-globe'" }
+            - { name: "image", label: "Image", widget: "image" }
+            - { name: "url", label: "Url", widget: "string" }
+      - label: "Generel opsætning"
+        name: "Shared"
+        file: "src/website/data/config/shared.json"
+        format: "json"
+        fields:
+          - label: "Top banner"
+            name: "topbanner"
+            widget: "image"
+          - label: "Top menu"
+            name: "topmenu"
+            widget: "list"
+            fields:
+            - { name: "title", label: "Title", widget: "string", required: true }
+            - { name: "weight", label: "Weight", widget: "number", required: true }
+            - { name: "slug", label: "Relativ url", widget: "string", required: true, hint: "såkaldt slug, eks. /kragekaldet" }
+            
+  - label: "Side"
+    name: "page"
+    create: true
+    folder: "src/website/content/page"
+    fields:
+    - name: "title"
+      label: "Titel"
+      widget: "string"
+      required: false
+    - name: "url"
+      label: "Url"
+      widget: "string"
+      required: false
+      hint: "Override page url by specifying relative url eg. /kontakt"
+    - name: "description"
+      label: "Meta description"
+      widget: "string"
+      required: false
+    - name: "body"
+      label: "Content"
+      widget: "markdown"
+
+  - label: "Enhed"
+    name: "enhed"
+    create: true
+    folder: "src/website/content/enhed"
+    fields:
+    - name: "title"
+      label: "Titel"
+      widget: "string"
+      required: false
+    - name: "ages"
+      label: "Aldersgruppe"
+      widget: "string"
+      required: false
+    - name: "time"
+      label: "Tidspunkt"
+      widget: "text"
+    - name: "kontingent"
+      label: "Kontingent"
+      hint: "Pris pr. halvår"
+      widget: "text"
+    - name: "contact"
+      label: "Kontakt"
+      widget: "text"
+      required: false
+    - name: "logo"
+      label: "Logo"
+      widget: "image"
+    - name: "description"
+      label: "Meta description"
+      widget: "string"
+      required: false
+    - name: "weight"
+      label: "Rækkefølge"
+      widget: "number"
+      required: false
+    - name: "body"
+      label: "Content"
+      widget: "markdown"
+
+  - label: "Kragekald"
+    name: "kragekald"
+    create: true
+    folder: "src/website/content/kragekaldet"
+    slug: "{{year}}-{{month}}"
+    editor:
+      preview: false
+    fields:
+    - name: "title"
+      label: "Titel"
+      widget: "string"
+      optional: false
+    - name: "date"
+      label: "Date"
+      widget: "date"
+      optional: false
+    - name: moid
+      label: "Media object id"
+      widget: "string"
+      optional: false
+      hint: "id fra url på uploaded fil. Et tal"
+    - name: issuuid
+      label: "Issuu key"
+      widget: "string"
+      optional: false
+      hint: "Id fra Issue embed url, eks. 6163144/65515412"
+    - name: "description"
+      label: "Meta description"
+      widget: "string"
+      required: false
